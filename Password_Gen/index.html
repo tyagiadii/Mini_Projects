@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Random Password Generator</h2>
+      <div class="input-box">
+        <input
+          type="text"
+          name=""
+          id="password"
+          placeholder="Create Password"
+          readonly=""
+        />
+        <input
+          type="number"
+          id="length"
+          min="8"
+          max="32"
+          value="16"
+          placeholder="Enter Number of Characters"
+        />
+        <label
+          ><input type="checkbox" id="includeLowercase" checked />
+          Lowercase(a-z)</label
+        >
+        <label
+          ><input type="checkbox" id="includeUppercase" checked />
+          Uppercase(A-Z)</label
+        >
+        <label
+          ><input type="checkbox" id="includeSymbols" checked />
+          Symbols(@-*)</label
+        >
+        <label
+          ><input type="checkbox" id="includeNumbers" checked />
+          Numbers(0-9)</label
+        >
+      </div>
+      <div>
+        <div id="btn" onclick="getPassword();">Generate Password</div>
+      </div>
+    </div>
+    <script src="pass.js"></script>
+  </body>
+</html>
