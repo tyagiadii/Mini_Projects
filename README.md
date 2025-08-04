@@ -7,11 +7,12 @@ A simple and interactive password generator built with HTML, CSS, and JavaScript
 
 ### 🚀 Live Demo
 
-👉 [Click here to try it] https://passwordgen-liard.vercel.app/
+👉 https://passwordgen-liard.vercel.app/
 
 ### 🧩 Features
 - Choose password length
 - Include uppercase, lowercase, numbers, and special characters
+
 
 
 
