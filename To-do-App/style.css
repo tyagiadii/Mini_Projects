@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
+body {
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Styling */
+.container {
+  max-width: 450px;
+  width: 90%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 26px;
+background-color: white;}
+
+/* Input Container (flex for input + button) */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Input Field */
+#todo-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+#todo-input:focus {
+  outline: none;
+  border-color: #00b894;
+}
+
+/* Add Task Button */
+#add-task-btn {
+  padding: 12px 18px;
+  background-color: #00b894;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+#add-task-btn:hover {
+  background-color: #019875;
+}
+
+/* Todo List */
+#todo-list {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#todo-list li {
+  background-color: darkblue;
+  margin: 10px 0;
+  padding: 14px 18px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  color: white;
+}
+
+/* Hover effect on task */
+#todo-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+.task-text {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+
+/* Fade-out animation for removing items */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Fade-in animation for new items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
